@@ -1,17 +1,16 @@
 #include <string>
-using namespace std;
 
 class Task {
     private:
-    string name;
+    std::string name;
     bool done;
 
     public:
-    Task(string name);
+    Task(std::string name);
 
     void markDone();
 
     bool isDone();
 
-    string getName();
+    std::string getName();
 };
