@@ -3,6 +3,8 @@
 // Constructor
 Task::Task(std::string name) : name(name) {}
 
+Task::Task(std::string name, bool done) : name(name), done(done) {}
+
 // Mark the task as completed/done
 void Task::markDone() {
     done = true;
@@ -13,6 +15,6 @@ bool Task::isDone() const {
     return done;
 }
 
-std::string Task::getName() {
+std::string Task::getName() const {
     return name;
 }

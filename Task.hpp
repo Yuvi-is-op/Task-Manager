@@ -8,9 +8,11 @@ class Task {
     public:
     Task(std::string name);
 
+    Task(std::string name, bool done);
+
     void markDone();
 
-    bool isDone();
+    bool isDone() const;
 
-    std::string getName();
+    std::string getName() const;
 };

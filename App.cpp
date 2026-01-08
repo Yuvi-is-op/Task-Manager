@@ -2,7 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <ranges>
+#include <algorithm>
 #include <stdexcept>
 #include "App.hpp"
 
@@ -35,7 +35,7 @@ void App::handleCommand(const std::string& s) {
     command = command == "" ? com : command;
     later = ltrim(later);
 
-    if (std::ranges::find(valid, command) == valid.end()) {
+    if (std::find(valid.begin(), valid.end(), command) == valid.end()) {
         throw std::invalid_argument("Not a valid command");
     }
 
