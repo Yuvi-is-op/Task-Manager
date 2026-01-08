@@ -22,7 +22,7 @@ void App::printMenu() {
 void App::handleCommand(const std::string& s) {
     std::string command{};
     std::string later{};
-    std::vector<std::string> valid = {"add", "list", "done", "delete", "save", "load", "quit"};
+    std::vector<std::string> valid = {"menu", "add", "list", "done", "delete", "save", "load", "menu", "quit"};
     std::string com = ltrim(s);
 
     for (int i{}; i < com.size(); i++) {
@@ -92,6 +92,9 @@ void App::handleCommand(const std::string& s) {
         manager.loadFromFile(later);
         return;
     }
+    else if (command == "menu") {
+        printMenu();
+    }
     else if (command == "quit") {
         running = false;
         return;
@@ -101,17 +104,21 @@ void App::handleCommand(const std::string& s) {
     }
 }
 
-void App::run() {
-    while (running) {
-        printMenu();
+void handleIndexCommand(const int& index) {
+    
+}
 
+void App::run() {
+    printMenu();
+    while (running) {
+        std::cout << "What would you like to do? ";
         std::string command;
         std::getline(std::cin, command);
         handleCommand(command);
     }
 }
 
- std::string ltrim(const std::string& s) {
+ std::string App::ltrim(const std::string& s) {
         for (int i{}; i < s.size(); i++) {
             if (s[i] != ' ') {
                 return s.substr(i);
