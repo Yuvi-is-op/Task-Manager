@@ -44,6 +44,7 @@ void App::handleCommand(const std::string& s) {
         manager.addTask(later);
     }
     else if (command == "list") {
+        std::cout << std::endl;
         manager.listTasks();
     }
     else if (command == "done") {
