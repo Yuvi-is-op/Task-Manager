@@ -18,7 +18,7 @@ void App::printMenu() {
     std::cout << "save <filename>" << std::endl;
     std::cout << "load <filename>" << std::endl;
     std::cout << "menu" << std::endl;
-    std::cout << "quit" << std::endl;
+    std::cout << "quit" << std::endl << std::endl;
 }
 
 void App::handleCommand(const std::string& s) {
