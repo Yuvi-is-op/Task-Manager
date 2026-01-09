@@ -8,7 +8,7 @@ class TaskManager {
 
     public:
     TaskManager();
-
+    
     void addTask(std::string name);
 
     void listTasks();
