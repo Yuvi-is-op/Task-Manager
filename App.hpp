@@ -13,7 +13,7 @@ class App {
 
     void handleCommand(const std::string& command);
 
-    void App::handleIndexCommand(std::function<void(int)> func, const std::string& s);
+    void handleIndexCommand(std::function<void(int)> func, const std::string& s);
 
     std::string ltrim(const std::string& s);
 
