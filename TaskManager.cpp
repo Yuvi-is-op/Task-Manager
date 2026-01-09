@@ -17,7 +17,7 @@ void TaskManager::listTasks() {
 
     for (const Task& task: tasks) {
         std::string done = task.isDone() ? "[X]" : "[ ]";
-        std::cout << count << "." << task.getName() << "\t" << done;
+        std::cout << count << ".\t" << task.getName() << "\t" << done;
         std::cout << std::endl;
         count++;
     }

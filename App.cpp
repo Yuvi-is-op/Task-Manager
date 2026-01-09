@@ -67,6 +67,7 @@ void App::handleCommand(const std::string& s) {
     else {
         throw std::invalid_argument("Not a valid command");
     }
+    std::cout << std::endl;
 }
 
 void App::handleIndexCommand(std::function<void(int)> func, const std::string& s) {
