@@ -1,5 +1,3 @@
-//unstaged changes
-// staged changes
 #ifndef APP_HPP
 #define APP_HPP
 
