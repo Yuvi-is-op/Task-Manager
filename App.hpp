@@ -2,6 +2,7 @@
 #define APP_HPP
 
 #include <string>
+#include <functional>
 #include "TaskManager.hpp"
 
 class App {
