@@ -1,3 +1,4 @@
+// Latest commit
 #ifndef APP_HPP
 #define APP_HPP
 
