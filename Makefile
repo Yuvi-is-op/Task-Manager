@@ -2,9 +2,10 @@
 CXX      := g++
 CXXFLAGS := -g -std=c++17 -Werror -Wall
 
+BUILDDIR    := build/
 TARGET   := taskmanager
 SRCS     := main.cpp App.cpp Task.cpp TaskManager.cpp
-OBJS     := $(SRCS:.cpp=.o)
+OBJS     := $(addprefix $(BUILDDIR), $(SRCS:.cpp=.o))
 
 #Makefile Rules
 all: $(TARGET)
@@ -14,8 +15,9 @@ $(TARGET): $(OBJS)
 	@echo "Linking files..."
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
-%.o: %.cpp
-	@echo "Compiling $@..."
+$(BUILDDIR)%.o: %.cpp
+	@mkdir -p $(BUILDDIR)
+	@echo "Compiling $@.cpp..."
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 run: $(TARGET)
@@ -24,5 +26,5 @@ run: $(TARGET)
 
 clean: 
 	@echo "Cleaning up..."
-	@rm -f $(OBJS) $(TARGET)
+	@rm -rf $(BUILDDIR) $(TARGET)
 	@echo "Clean up complete!"
