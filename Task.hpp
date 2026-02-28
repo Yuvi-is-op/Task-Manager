@@ -8,13 +8,13 @@ class Task {
     bool done;
 
     public:
-    Task(const std::string name);
+    Task(const std::string& name);
 
-    Task(const std::string name, bool done);
+    Task(const std::string& name, bool done);
 
     void markDone();
 
     bool isDone() const;
 
-    std::string getName() const;
+   const std::string& getName() const;
 };

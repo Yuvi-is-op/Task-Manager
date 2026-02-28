@@ -11,7 +11,7 @@ class TaskManager {
     public:
     TaskManager();
     
-    void addTask(const std::string name);
+    void addTask(const std::string& name);
 
     void listTasks();
 
@@ -19,7 +19,7 @@ class TaskManager {
 
     void deleteTask(int index);
 
-    void saveToFile(const std::string FileName);
+    void saveToFile(const std::string& FileName);
 
-    void loadFromFile(const std::string FileName);
+    void loadFromFile(const std::string& FileName);
 };

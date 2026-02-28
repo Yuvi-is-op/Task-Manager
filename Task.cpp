@@ -1,9 +1,9 @@
 #include "Task.hpp"
 
 // Constructor
-Task::Task(const std::string name) : name(name) {}
+Task::Task(const std::string& name) : name(name) {}
 
-Task::Task(const std::string name, bool done) : name(name), done(done) {}
+Task::Task(const std::string& name, bool done) : name(name), done(done) {}
 
 // Mark the task as completed/done
 void Task::markDone() {
@@ -15,6 +15,6 @@ bool Task::isDone() const {
     return done;
 }
 
-std::string Task::getName() const {
+const std::string& Task::getName() const {
     return name;
 }
