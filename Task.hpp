@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 
 class Task {
@@ -6,9 +8,9 @@ class Task {
     bool done;
 
     public:
-    Task(std::string name);
+    Task(const std::string name);
 
-    Task(std::string name, bool done);
+    Task(const std::string name, bool done);
 
     void markDone();
 

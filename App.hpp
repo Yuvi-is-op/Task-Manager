@@ -1,6 +1,7 @@
+// Unstaged changes
+// Staged changes
 // Latest commit
-#ifndef APP_HPP
-#define APP_HPP
+#pragma once
 
 #include <string>
 #include <functional>
@@ -24,6 +25,4 @@ class App {
 
     void run();
 };
-
-#endif 
 

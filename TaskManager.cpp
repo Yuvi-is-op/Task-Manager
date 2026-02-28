@@ -7,7 +7,7 @@
 
 TaskManager::TaskManager() {} 
 
-void TaskManager::addTask(std::string name) {
+void TaskManager::addTask(const std::string name) {
     Task task = Task(name);
     tasks.push_back(task);
 }
@@ -39,7 +39,7 @@ void TaskManager::deleteTask(int index) {
     tasks.erase(tasks.begin() + index);
 }
 
-void TaskManager::saveToFile(std::string FileName) {
+void TaskManager::saveToFile(const std::string FileName) {
     std::ofstream file(FileName);
     std::string complete{};
 
@@ -53,7 +53,7 @@ void TaskManager::saveToFile(std::string FileName) {
     }
 };
 
-void TaskManager::loadFromFile(std::string FileName) {
+void TaskManager::loadFromFile(const std::string FileName) {
     std::ifstream file(FileName);
     std::string line;
 
