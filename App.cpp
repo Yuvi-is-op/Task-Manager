@@ -11,6 +11,7 @@
 App::App() : running(true) {}
 
 void App::printMenu() {
+    std::cout << std::endl;	
     std::cout << "Commands:" << std::endl;
     std::cout << "add <task name>" << std::endl;
     std::cout << "list" << std::endl;
@@ -19,7 +20,7 @@ void App::printMenu() {
     std::cout << "save <filename>" << std::endl;
     std::cout << "load <filename>" << std::endl;
     std::cout << "menu" << std::endl;
-    std::cout << "quit" << std::endl << std::endl;
+    std::cout << "quit" << std::endl; 
 }
 
 void App::handleCommand(const std::string& s) {
@@ -79,6 +80,7 @@ void App::handleIndexCommand(std::function<void(int)> func, const std::string& s
 
 void App::run() {
     printMenu();
+    std::cout << std::endl;
     while (running) {
         try {
             std::string command{};
